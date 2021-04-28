@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    background: #f1f1f1;
+}
+
+/*************************************
+* Header section 
+**************************************/
+.header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  /*********************************** 
+  * The navbar
+  ************************************/
+  /* Navbar container */
+.topnav {
+    margin-top: 4px;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+/* Navbar links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+/* change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*********************************
+* Main section
+*********************************/
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    background: #fff;
+  }
+  
+  /* Left and right column */
+  .column.side {
+    width: 23%;
+  }
+.column.side.left-col {
+    margin-top: 20px;
+}
+
+.column.side.right-col {
+    margin-top: 20px;
+}
+
+.right-col .categories {
+    border: 1px solid;
+    width: 80%;
+    margin: auto;
+}
+
+.right-col h2 {
+    width: 100%;
+    text-align: center;
+    /* border-bottom: 1px solid; */
+}
+
+.right-col .categories a{
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #222;
+}
+
+.right-col .categories a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.right-col .profile {
+    width: 80%;
+    margin: auto;
+} 
+  
+  /* Middle column */
+  .column.middle {
+    width: 51%;
+    margin: 0px 10px;
+    background: #f1f1f1;
+  }
+
+  .column.middle h2 {
+      /* background: #fff; */
+      padding: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+/************************************
+* POST SECTION
+*************************************/
+#post-container {
+    width: 100%;
+}
+
+.post {
+    width: 100%;
+    border: 1px;
+    margin-bottom: 8px;
+    padding: 2px 8px;
+    background: #fff;
+}
+
+
+  /* Responsive layout - makes the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+      width: 100%;
+    }
+}
+
+/***********************************
+* Footer section
+***********************************/
+.footer {
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
