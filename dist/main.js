@@ -35,6 +35,7 @@ const newElement = () => {
     else {
         postContainer.appendChild(postDiv);
         userMsg.value = "";
+        postTitle.value = "";
     }
     btnDelete.addEventListener('click', function () {
         const parent = this.parentElement;
