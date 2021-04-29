@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-  
+
 body {
     background: #f1f1f1;
 }
@@ -13,18 +13,18 @@ body {
     background-color: #F1F1F1;
     text-align: center;
     padding: 10px 20px;
-  }
+}
 
-  /*********************************** 
+/*********************************** 
   * The navbar
   ************************************/
-  /* Navbar container */
+/* Navbar container */
 .topnav {
     margin-top: 4px;
     overflow: hidden;
     background-color: #333;
 }
-  
+
 /* Navbar links */
 .topnav a {
     float: left;
@@ -34,7 +34,7 @@ body {
     padding: 14px 16px;
     text-decoration: none;
 }
-  
+
 /* change color on hover */
 .topnav a:hover {
     background-color: #ddd;
@@ -49,12 +49,13 @@ body {
     float: left;
     padding: 10px;
     background: #fff;
-  }
-  
-  /* Left and right column */
-  .column.side {
+}
+
+/* Left and right column */
+.column.side {
     width: 23%;
-  }
+}
+
 .column.side.left-col {
     margin-top: 20px;
 }
@@ -75,7 +76,7 @@ body {
     /* border-bottom: 1px solid; */
 }
 
-.right-col .categories a{
+.right-col .categories a {
     display: block;
     padding: 14px 16px;
     text-decoration: none;
@@ -90,27 +91,27 @@ body {
 .right-col .profile {
     width: 80%;
     margin: auto;
-} 
-  
-  /* Middle column */
-  .column.middle {
+}
+
+/* Middle column */
+.column.middle {
     width: 51%;
     margin: 0px 10px;
     background: #f1f1f1;
-  }
+}
 
-  .column.middle h2 {
-      /* background: #fff; */
-      padding: 10px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
+.column.middle h2 {
+    /* background: #fff; */
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
+}
+
 /************************************
 * POST SECTION
 *************************************/
@@ -126,11 +127,34 @@ body {
     background: #fff;
 }
 
+.post .postText {
+    width: 100%;
+    padding: 0 10px;
+}
 
-  /* Responsive layout - makes the columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column.side, .column.middle {
-      width: 100%;
+.post .editSection {
+    width: 100%;
+}
+
+.post .editSection button {
+    /* float: right; */
+    padding: 5px;
+    font-size: 16px;
+    line-height: 28px;
+    margin-right: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 6px;
+}
+
+
+/* Responsive layout - makes the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .column.side,
+    .column.middle {
+        width: 100%;
     }
 }
 
