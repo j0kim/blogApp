@@ -15,11 +15,12 @@ const newElement = () => {
     newDiv.appendChild(newP);
     // newDiv.appendChild(newP2);
     newDiv.classList.add("post");
-    if (postMsg.toString() === "") {
+    if (userMsg.value === "") {
         alert("Please enter something to post!");
     }
     else {
         postContainer.appendChild(newDiv);
+        userMsg.value = "";
     }
 };
 postBtn.addEventListener('click', newElement, false);
