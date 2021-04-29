@@ -112,6 +112,18 @@ body {
     clear: both;
 }
 
+/***********************************
+* CREATE POST SECTION
+**************************************/
+
+.left-col .create-post #post-title {
+    font-size: 20px;
+    padding: 4px;
+    width: 274px;
+    margin-bottom: 4px;
+}
+
+
 /************************************
 * POST SECTION
 *************************************/
