@@ -3,7 +3,7 @@
 }
 
 body {
-    background: #f1f1f1;
+    background: #f5f5f5;
 }
 
 /*************************************
@@ -63,7 +63,7 @@ body {
 
 .column.side.right-col {
     margin-top: 20px;
-    background: #f1f1f1;
+    background: #f5f5f5;
 }
 
 .column.side.right-col .about-me, .popular-posts{
@@ -89,12 +89,12 @@ body {
 .column.middle {
     width: 51%;
     margin: 0px 10px;
-    background: #f1f1f1;
+    background: #f5f5f5;
 }
 
 .column.middle h2 {
     /* background: #fff; */
-    padding: 10px;
+    padding: 5px;
 }
 
 /* Clear floats after the columns */
@@ -129,6 +129,7 @@ body {
     margin-bottom: 8px;
     padding: 2px 8px;
     background: #fff;
+    box-shadow: 2px 2px 1px 2px #888888;
 }
 
 .post .postText {

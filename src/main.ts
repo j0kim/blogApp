@@ -1,12 +1,12 @@
 const postBtn = document.querySelector("#btnPost") as HTMLButtonElement;
-let postContainer = document.querySelector('#post-container') as HTMLDivElement;
+const postContainer = document.querySelector('#post-container') as HTMLDivElement;
 
 // Create a new div element when the post button is clicked
 
 const newElement = () => {
-    let postTitle = document.querySelector('#post-title') as HTMLInputElement;
-    let userMsg = document.querySelector("#message") as HTMLInputElement;
-    let postMsg = document.createTextNode(userMsg.value);
+    const postTitle = document.querySelector('#post-title') as HTMLInputElement;
+    const userMsg = document.querySelector("#message") as HTMLInputElement;
+    const postMsg = document.createTextNode(userMsg.value);
 
     // Create divs to hold the user's posts
     const postDiv = document.createElement('div');

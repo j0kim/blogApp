@@ -1,11 +1,11 @@
 "use strict";
 const postBtn = document.querySelector("#btnPost");
-let postContainer = document.querySelector('#post-container');
+const postContainer = document.querySelector('#post-container');
 // Create a new div element when the post button is clicked
 const newElement = () => {
-    let postTitle = document.querySelector('#post-title');
-    let userMsg = document.querySelector("#message");
-    let postMsg = document.createTextNode(userMsg.value);
+    const postTitle = document.querySelector('#post-title');
+    const userMsg = document.querySelector("#message");
+    const postMsg = document.createTextNode(userMsg.value);
     // Create divs to hold the user's posts
     const postDiv = document.createElement('div');
     const textDiv = document.createElement('div');
