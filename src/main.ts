@@ -41,27 +41,34 @@ const newElement = () => {
         postTitle.value = "";
     }
 
+    // When the delete button is clicked
     btnDelete.addEventListener('click', function () {
         const grandParent = this.parentElement?.parentElement;
         grandParent?.remove();
     });
 
+    // When the update button is clicked
     btnUpdate.addEventListener('click', function () {
         const grandParent = this.parentElement?.parentElement;
         
         const updateDiv = document.createElement('div');
-        const updateInput = document.createElement('input');
+        const updateHeading = document.createElement('h3');
+        const updateInput = document.createElement('textarea');
         const saveBtn = document.createElement('button');
         
         saveBtn.innerHTML = '<i class="fas fa-save"> Save</i>';
+        updateHeading.innerHTML = "Make Changes"
         // saveBtn.innerHTML = 'Save';
         updateInput.value = newP.innerHTML;
         updateDiv.classList.add('updateDiv');
-    
+        updateInput.classList.add('updateInput');
+        
+        updateDiv.appendChild(updateHeading);
         updateDiv.appendChild(updateInput);
         updateDiv.appendChild(saveBtn);
         grandParent?.appendChild(updateDiv);
 
+        // When the Save button is clicked
         saveBtn.addEventListener('click', function() {
             newP.innerHTML = updateInput.value;
             const saveBtnParent = this.parentElement;
