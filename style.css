@@ -141,7 +141,7 @@ body {
     width: 100%;
 }
 
-.post .editSection button {
+.post .editSection button, .updateDiv button {
     /* float: right; */
     padding: 5px;
     font-size: 16px;
@@ -150,6 +150,23 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.updateDiv{
+    width: 100%;
+    border-top: 1px solid;
+    padding: 10px;
+    margin-top: 6px;
+}
+
+.updateDiv button {
+    /* float: right; */
+    padding: 5px;
+    font-size: 16px;
+    line-height: 28px;
+    margin-right: 16px;
+    cursor: pointer;
+    border-radius: 3px;
 }
 
 

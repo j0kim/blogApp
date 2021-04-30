@@ -1,8 +1,6 @@
 const postBtn = document.querySelector("#btnPost") as HTMLButtonElement;
 const postContainer = document.querySelector('#post-container') as HTMLDivElement;
 
-// Create a new div element when the post button is clicked
-
 const newElement = () => {
     const postTitle = document.querySelector('#post-title') as HTMLInputElement;
     const userMsg = document.querySelector("#message") as HTMLInputElement;
@@ -44,9 +42,31 @@ const newElement = () => {
     }
 
     btnDelete.addEventListener('click', function () {
-        const parent = this.parentElement;
-        const grandParent = parent?.parentElement;
+        const grandParent = this.parentElement?.parentElement;
         grandParent?.remove();
+    });
+
+    btnUpdate.addEventListener('click', function () {
+        const grandParent = this.parentElement?.parentElement;
+        
+        const updateDiv = document.createElement('div');
+        const updateInput = document.createElement('input');
+        const saveBtn = document.createElement('button');
+        
+        saveBtn.innerHTML = '<i class="fas fa-save"> Save</i>';
+        // saveBtn.innerHTML = 'Save';
+        updateInput.value = newP.innerHTML;
+        updateDiv.classList.add('updateDiv');
+    
+        updateDiv.appendChild(updateInput);
+        updateDiv.appendChild(saveBtn);
+        grandParent?.appendChild(updateDiv);
+
+        saveBtn.addEventListener('click', function() {
+            newP.innerHTML = updateInput.value;
+            const saveBtnParent = this.parentElement;
+            saveBtnParent?.remove();
+        });
     });
 };
 

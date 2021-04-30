@@ -1,7 +1,6 @@
 "use strict";
 const postBtn = document.querySelector("#btnPost");
 const postContainer = document.querySelector('#post-container');
-// Create a new div element when the post button is clicked
 const newElement = () => {
     const postTitle = document.querySelector('#post-title');
     const userMsg = document.querySelector("#message");
@@ -38,9 +37,28 @@ const newElement = () => {
         postTitle.value = "";
     }
     btnDelete.addEventListener('click', function () {
-        const parent = this.parentElement;
-        const grandParent = parent === null || parent === void 0 ? void 0 : parent.parentElement;
+        var _a;
+        const grandParent = (_a = this.parentElement) === null || _a === void 0 ? void 0 : _a.parentElement;
         grandParent === null || grandParent === void 0 ? void 0 : grandParent.remove();
+    });
+    btnUpdate.addEventListener('click', function () {
+        var _a;
+        const grandParent = (_a = this.parentElement) === null || _a === void 0 ? void 0 : _a.parentElement;
+        const updateDiv = document.createElement('div');
+        const updateInput = document.createElement('input');
+        const saveBtn = document.createElement('button');
+        saveBtn.innerHTML = '<i class="fas fa-save"> Save</i>';
+        // saveBtn.innerHTML = 'Save';
+        updateInput.value = newP.innerHTML;
+        updateDiv.classList.add('updateDiv');
+        updateDiv.appendChild(updateInput);
+        updateDiv.appendChild(saveBtn);
+        grandParent === null || grandParent === void 0 ? void 0 : grandParent.appendChild(updateDiv);
+        saveBtn.addEventListener('click', function () {
+            newP.innerHTML = updateInput.value;
+            const saveBtnParent = this.parentElement;
+            saveBtnParent === null || saveBtnParent === void 0 ? void 0 : saveBtnParent.remove();
+        });
     });
 };
 postBtn.addEventListener('click', newElement, false);
